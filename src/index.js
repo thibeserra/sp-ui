@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'mobx-react';
 import AppStore from './store';
+import { BrowserRouter } from 'react-router-dom'
+import Routes from './routes/Routes'
 
 const stores = {
     AppStore
@@ -17,7 +19,17 @@ const Root = (
     </Provider>
 )
 
+// ReactDOM.render(
+//     <Provider {...stores}>
+//         <BrowserRouter>
+//             <Routes />
+//         </BrowserRouter>
+//     </Provider>, document.getElementById('root')
+// );
+
+
 ReactDOM.render(Root, document.getElementById('root'));
+
 // ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import logo from '../../../src/logo.svg';
 import './App.css';
 import {inject, observer} from 'mobx-react';
+import PropTypes from 'prop-types';
+
+const propTypes = {
+  AppStore: PropTypes.any
+}
 
 @inject('AppStore')
 @observer
@@ -26,6 +31,9 @@ class App extends Component {
           >
             Learn React
           </a>
+          <p>
+            {`${process.env.PUBLIC_URL}/`}
+          </p>
         </header>
       </div>
     );
