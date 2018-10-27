@@ -3,15 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "customize-cra": "^0.1.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "mobx": "^5.5.2",
+    "mobx-react": "^5.3.6",
     "react": "^16.6.0",
+    "react-app-rewire-mobx": "^1.0.9",
+    "react-app-rewired": "^1.6.2",
     "react-dom": "^16.6.0",
-    "react-scripts": "2.0.5"
+    "react-scripts": "2.0.5",
+    "styled-components": "^4.0.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test:dev": "react-app-rewired test --env=jsdom --watchAll",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-app-rewired eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-preset-mobx": "^2.0.0"
+  }
 }

@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {inject, observer} from 'mobx-react';
 
+@inject('AppStore')
+@observer
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -10,6 +14,9 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <p>
+            {this.props.AppStore.showMessage()}
           </p>
           <a
             className="App-link"
