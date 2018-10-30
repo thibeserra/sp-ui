@@ -12,6 +12,10 @@ const propTypes = {
 @observer
 class App extends Component {
 
+  componentDidMount() {
+    console.log(JSON.stringify(process.env))
+  }
+
   render() {
     return (
       <div className="App">
@@ -32,7 +36,7 @@ class App extends Component {
             Learn React
           </a>
           <p>
-            {`${process.env.PUBLIC_URL}/`}
+            {`${process.env}/`}
           </p>
         </header>
       </div>
