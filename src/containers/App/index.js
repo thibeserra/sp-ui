@@ -3,6 +3,7 @@ import logo from '../../../src/logo.svg';
 import './App.css';
 import {inject, observer} from 'mobx-react';
 import PropTypes from 'prop-types';
+import request from '../../request';
 
 const propTypes = {
   AppStore: PropTypes.any
@@ -12,8 +13,14 @@ const propTypes = {
 @observer
 class App extends Component {
 
+  constructor(props) {
+    super(props)
+  }
+
   componentDidMount() {
-    console.log(JSON.stringify(process.env))
+    console.log(JSON.stringify(process.env)) 
+    request('http://www.mocky.io/v2/5bd999282f00003e0006d202')
+    this.props.AppStore.getAxios();
   }
 
   render() {
@@ -26,6 +33,9 @@ class App extends Component {
           </p>
           <p>
             {this.props.AppStore.showMessage()}
+          </p>
+          <p>
+            {this.props.AppStore.status}
           </p>
           <a
             className="App-link"
