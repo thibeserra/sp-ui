@@ -4,7 +4,7 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'mobx-react';
-import AppStore from './store';
+import AppStore from './containers/App/store';
 import { BrowserRouter } from 'react-router-dom'
 import Routes from './routes/Routes'
 

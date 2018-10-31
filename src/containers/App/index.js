@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../../../src/logo.svg';
-import './App.css';
+import './Style/App.css';
 import {inject, observer} from 'mobx-react';
 import PropTypes from 'prop-types';
 import request from '../../request';
