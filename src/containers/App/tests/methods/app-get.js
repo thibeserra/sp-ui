@@ -13,7 +13,7 @@ module.exports = (nock, container) => {
             expect(result).not.toBeNull()
             expect(result).toHaveProperty('status', 200)
             expect(result).toHaveProperty('statusText', 'OK')
-            expect(result.data).toHaveProperty('message', 'deu certo hein..')
+            expect(result.data).toHaveProperty('message', 'hello world test')
 
             done()
         })
@@ -30,7 +30,7 @@ module.exports = (nock, container) => {
             expect(result).not.toBeNull()
             expect(result).toHaveProperty('status', 200)
             expect(result).toHaveProperty('statusText', 'OK')
-            expect(result.data).toHaveProperty('message', 'deu certo hein..')
+            expect(result.data).toHaveProperty('message', 'hello world test')
 
             done()
         })
@@ -47,7 +47,7 @@ module.exports = (nock, container) => {
             expect(result).not.toBeNull()
             expect(result).toHaveProperty('status', 200)
             expect(result).toHaveProperty('statusText', 'OK')
-            expect(result.data).toHaveProperty('message', 'get the request 2 http request')
+            expect(result.data).toHaveProperty('message', 'get the request 2 http request test')
 
             done()
         })
