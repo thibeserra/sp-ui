@@ -9,18 +9,27 @@ class AppStore {
 
     @observable status = OK;
 
-    @observable getList = {};
-
     @action showMessage() {
         return this.message;
     };
 
-    @action 
-    async getAxios() {
+    @action
+    async getMessage() {
         let result = {}
         try {
-            result = await service.request()
-        } catch(e) {
+            result = await service.getMessage()
+        } catch (e) {
+            console.log(e)
+        }
+        return result
+    }
+
+    @action
+    async getAnotherMessage() {
+        let result = {}
+        try {
+            result = await service.getAnotherMessage()
+        } catch (e) {
             console.log(e)
         }
         return result

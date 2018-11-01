@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import logo from '../../../src/logo.svg';
 import './Style/App.css';
-import {inject, observer} from 'mobx-react';
+import { inject, observer } from 'mobx-react';
 import PropTypes from 'prop-types';
-import request from '../../request';
 
 const propTypes = {
   AppStore: PropTypes.any
@@ -18,9 +17,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    console.log(JSON.stringify(process.env)) 
-    // request('http://www.mocky.io/v2/5bd999282f00003e0006d202')
-    this.props.AppStore.getAxios();
+    console.log(JSON.stringify(process.env))
+    this.props.AppStore.getMessage();
   }
 
   render() {
