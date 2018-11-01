@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount() {
     console.log(JSON.stringify(process.env)) 
-    request('http://www.mocky.io/v2/5bd999282f00003e0006d202')
+    // request('http://www.mocky.io/v2/5bd999282f00003e0006d202')
     this.props.AppStore.getAxios();
   }
 

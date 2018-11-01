@@ -1,6 +1,6 @@
 import { action, observable } from 'mobx';
 import { OK } from 'http-status';
-import axios from 'axios';
+import * as service from './services'
 const Mobx = require('mobx');
 
 class AppStore {
@@ -19,7 +19,7 @@ class AppStore {
     async getAxios() {
         let result = {}
         try {
-            result = await axios.get('http://www.mocky.io/v2/5bd999282f00003e0006d202')
+            result = await service.request()
         } catch(e) {
             console.log(e)
         }

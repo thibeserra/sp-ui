@@ -1,1 +1,0 @@
-exports.nockRequest = { message: 'deu certo hein..' }
