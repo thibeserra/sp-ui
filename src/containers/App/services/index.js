@@ -19,3 +19,19 @@ export async function getAnotherMessage() {
     }
     return result;
 }
+
+export async function getBranchesPCP() {
+    let result = {};
+    try {
+        const header = {
+            headers: {
+                'Content-Type': 'application/json',
+                authorization: 'token'
+            }
+        }
+        result = await axios.get('http://localhost:9001/v1/pcp/bf/branches', header)
+    } catch (e) {
+        console.log(e)
+    }
+    return result;
+}

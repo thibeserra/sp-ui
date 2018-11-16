@@ -15,3 +15,10 @@ exports.getAnotherMessage = () => {
         .get('/5bdaf0c33200008a163ad3f6')
         .reply(OK, mock.getAnotherMessage)
 }
+
+exports.getBranchesPCP = () => {
+    return nock('http://localhost:9001/v1/pcp/bf')
+        .defaultReplyHeaders({ 'access-control-allow-origin': '*' })
+        .get('/branches')
+        .reply(OK, mock.getBranchesPCP)
+}

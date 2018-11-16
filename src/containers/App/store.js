@@ -34,6 +34,17 @@ class AppStore {
         }
         return result
     }
+
+    @action
+    async getBranchesPCP() {
+        let result = {}
+        try {
+            result = await service.getBranchesPCP()
+        } catch(e) {
+            console.log(e)
+        }
+        return result
+    }
 }
 
 export default new AppStore();

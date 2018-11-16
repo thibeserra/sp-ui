@@ -16,9 +16,9 @@ class App extends Component {
     super(props)
   }
 
-  componentDidMount() {
+  async componentDidMount() {
     console.log(JSON.stringify(process.env))
-    this.props.AppStore.getMessage();
+    const branches = await this.props.AppStore.getBranchesPCP();
   }
 
   render() {
